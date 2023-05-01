@@ -2457,7 +2457,8 @@ class Dex2Oat final {
       VLOG(compiler) << "Changing compiler filter to verify from speed-profile "
           << "because of empty or non existing profile";
 
-      compiler_options_->SetCompilerFilter(CompilerFilter::kVerify);
+      //compiler_options_->SetCompilerFilter(CompilerFilter::kVerify);
+	compiler_options_->SetCompilerFilter(CompilerFilter::kSpeed);
 
       // Note that we could reset the image_type to CompilerOptions::ImageType::kNone
       // to prevent an app image generation.
